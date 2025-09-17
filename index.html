@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System • Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="dashboard">
+    <header class="topbar">
+        <div class="brand">🏨 Hostel Manager</div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="students.html" class="nav-link">Manage Students</a>
+            <a href="rooms.html" class="nav-link">Rooms</a>
+            <a href="notices.html" class="nav-link">Notices</a>
+            <a href="maintenance.html" class="nav-link">Maintenance</a>
+            <a href="payments.html" class="nav-link">Payments</a>
+            <button id="logoutBtn" class="btn btn-danger btn-small">Logout</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Quick Add Student</h2>
+            <p class="muted small">Add a student and optionally place them in a room.</p>
+            <form id="quickAddForm" class="grid">
+                <label class="field">
+                    <span>Name</span>
+                    <input class="input" name="name" required />
+                </label>
+                <label class="field">
+                    <span>Room Number</span>
+                    <input class="input" name="room" placeholder="e.g. A101" />
+                </label>
+                <label class="field">
+                    <span>Contact</span>
+                    <input class="input" name="phone" placeholder="e.g. 9876543210" />
+                </label>
+                <label class="field">
+                    <span>Year</span>
+                    <select name="year" class="input">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </label>
+                <div class="actions">
+                    <button class="btn btn-primary" type="submit">Add Student</button>
+                </div>
+                <div class="field-error" id="quickAddError"></div>
+            </form>
+        </section>
+
+        <section class="card">
+            <div class="toolbar">
+                <h2>Latest Students</h2>
+                <a class="btn" href="students.html">Open full list</a>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Room</th>
+                            <th>Contact</th>
+                            <th>Year</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="latestStudentsTbody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-root" class="modal-root"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
+
+

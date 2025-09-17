@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System • Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="signup" class="auth-page">
+    <main class="auth-container">
+        <section class="card auth-card">
+            <h1>Create Account</h1>
+            <p class="muted">It takes less than a minute</p>
+            <form id="signupForm" class="stack">
+                <label class="field">
+                    <span>Name</span>
+                    <input class="input" name="name" required />
+                </label>
+                <label class="field">
+                    <span>Email</span>
+                    <input class="input" name="email" type="email" required />
+                </label>
+                <label class="field">
+                    <span>Password</span>
+                    <input class="input" name="password" type="password" minlength="6" required />
+                </label>
+                <button class="btn btn-primary" type="submit">Sign Up</button>
+                <div id="signupError" class="field-error"></div>
+            </form>
+            <div class="muted small">Have an account? <a href="login.html">Login</a></div>
+        </section>
+    </main>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System • Payments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="payments">
+    <header class="topbar">
+        <div class="brand">🏨 Hostel Manager</div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="students.html" class="nav-link">Manage Students</a>
+            <a href="rooms.html" class="nav-link">Rooms</a>
+            <a href="notices.html" class="nav-link">Notices</a>
+            <a href="maintenance.html" class="nav-link">Maintenance</a>
+            <a href="payments.html" class="nav-link active">Payments</a>
+            <button id="logoutBtn" class="btn btn-danger btn-small">Logout</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <div class="toolbar">
+                <h2>Payments</h2>
+                <button id="addPaymentBtn" class="btn btn-primary btn-small">Record Payment</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Student</th><th>Amount</th><th>Status</th><th>Date</th><th></th></tr></thead>
+                    <tbody id="paymentsTbody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-root" class="modal-root"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
+
+
